@@ -26,13 +26,14 @@ const currencies = {
     countries: ['Tanzania', 'Uganda', 'Somalia', 'Kenya'],
   },
 };
-const currenciesRouter = express.Router();
-app.use('/currencies', currenciesRouter);
-
 currenciesRouter.put('/:name/countries', (req, res, next) => {
+ //Original name 
   const currencyName = req.params.name;
+ //new name
   const country = req.query;
-  currencies[currencyName] = country;
+ //change the original name for the new name
+ currencies[currencyName] = country;
+//send new name
   res.send(currencies[currencyName]);
 })
 
