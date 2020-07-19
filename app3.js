@@ -1,4 +1,4 @@
-//Fix the route so that it sends back the array of metal building materials.
+//Fix the route so that it sends back the array of metal building materials
 
 
 const express = require('express');
