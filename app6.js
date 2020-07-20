@@ -12,10 +12,13 @@ app.use('/soups', soupsRouter);
 
 
 soupsRouter.post('/', (req, res, next) => {
+ //new soup from user
   const newSoup = req.query.name;
-  soups.push(newSoup);
-  res.status(201).send(newSoup);
-})
+  //add newsoup to soups
+ soups.push(newSoup);
+ //send status and new soup
+ res.status(201).send(newSoup);
+});
 
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
